@@ -16,7 +16,7 @@ body {
   z-index: -2;
 }
 
-body::before, 
+body::before,
 body::after {
   content: "";
   position: fixed;
