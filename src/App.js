@@ -6,10 +6,6 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    fetchQuote();
-  }, []);
-
   const fetchQuote = async () => {
     try {
       const response = await fetch('https://api.quotable.io/random');
@@ -25,18 +21,33 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    fetchQuote();
+  }, []);
+
   const handleNewQuote = () => {
     fetchQuote();
   };
 
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error loading quote: {error.message}</p>;
+  if (error) return (
+    <p>
+      Error loading quote:{' '}
+      {error.message}
+    </p>
+  );
 
   return (
     <div id="quote-box">
       <p id="text">{quote.text}</p>
-      <p id="author">- {quote.author}</p>
-      <button id="new-quote" onClick={handleNewQuote}>
+      <p id="author">
+        - {quote.author}
+      </p>
+      <button
+        id="new-quote"
+        type="button"
+        onClick={handleNewQuote}
+      >
         New quote
       </button>
       <a
@@ -52,4 +63,3 @@ function App() {
 }
 
 export default App;
-
