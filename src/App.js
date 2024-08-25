@@ -29,13 +29,19 @@ function App() {
     fetchQuote();
   };
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return (
-    <p>
-      Error loading quote:{' '}
-      {error.message}
-    </p>
-  );
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return (
+      <p>
+        Error loading quote:
+        {' '}
+        {error.message}
+      </p>
+    );
+  }
 
   return (
     <div id="quote-box">
