@@ -47,7 +47,9 @@ function App() {
     <div id="quote-box">
       <p id="text">{quote.text}</p>
       <p id="author">
-        - {quote.author}
+        - 
+        {' '}
+        {quote.author}
       </p>
       <button
         id="new-quote"
