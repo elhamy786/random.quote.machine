@@ -38,7 +38,6 @@ body::after {
 ```
 
 ## Demo 📸
-![Live Demo](https://random-quote-machine-orjy-d3n3wi3t8-elhams-projects-228a98e0.vercel.app/)
 ![Screenshot](./src/Screenshot%202024-08-24%20123007.png)
 
 ## Technologies Used 🛠️
